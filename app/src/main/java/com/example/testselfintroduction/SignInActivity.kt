@@ -16,6 +16,10 @@ class SignInActivity : AppCompatActivity() {
         val getPassword = findViewById<EditText>(R.id.getPassword)
         val logIn = findViewById<Button>(R.id.button_login)
 
+        getId.setText(intent.getStringExtra("id"))
+        getPassword.setText(intent.getStringExtra("password"))
+
+
         logIn.setOnClickListener {
             var getIdtext = getId.text.toString()
             var getPwtext = getPassword.text.toString()

@@ -1,5 +1,6 @@
 package com.example.testselfintroduction
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -18,6 +19,10 @@ class SignUpActivity : AppCompatActivity() {
             var signupPassword = findViewById<EditText>(R.id.signupPassword).text.toString()
             if (signupId != "" && signupPassword != "" && signupName != "") {
                 Toast.makeText(this, "회원가입 성공", Toast.LENGTH_SHORT).show()
+                var intent = Intent(this, SignInActivity::class.java)
+                intent.putExtra("id", signupId)
+                intent.putExtra("password", signupPassword)
+                startActivity(intent)
                 finish()
             } else {
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
