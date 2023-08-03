@@ -22,7 +22,7 @@ class SignUpActivity : AppCompatActivity() {
                 var intent = Intent(this, SignInActivity::class.java)
                 intent.putExtra("id", signupId)
                 intent.putExtra("password", signupPassword)
-                startActivity(intent)
+                setResult(RESULT_OK, intent)
                 finish()
             } else {
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다.", Toast.LENGTH_SHORT).show()
