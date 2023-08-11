@@ -32,11 +32,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <android.widget.Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/finishBtn"
-        android:text="종료"
-        android:background="@drawable/button_back"
         android:layout_gravity="center"
-        android:layout_width="match_parent"
+        android:background="@drawable/button_back"
+        android:drawableStart="@drawable/icon_select"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:text="종료"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 </LinearLayout>
